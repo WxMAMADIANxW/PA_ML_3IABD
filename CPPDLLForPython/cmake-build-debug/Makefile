@@ -168,33 +168,6 @@ library.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/library.cpp.s
 .PHONY : library.cpp.s
 
-libraryPMC.obj: libraryPMC.cpp.obj
-
-.PHONY : libraryPMC.obj
-
-# target to build an object file
-libraryPMC.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/libraryPMC.cpp.obj
-.PHONY : libraryPMC.cpp.obj
-
-libraryPMC.i: libraryPMC.cpp.i
-
-.PHONY : libraryPMC.i
-
-# target to preprocess a source file
-libraryPMC.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/libraryPMC.cpp.i
-.PHONY : libraryPMC.cpp.i
-
-libraryPMC.s: libraryPMC.cpp.s
-
-.PHONY : libraryPMC.s
-
-# target to generate assembly for a file
-libraryPMC.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/libraryPMC.cpp.s
-.PHONY : libraryPMC.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -207,9 +180,6 @@ help:
 	@echo ... library.obj
 	@echo ... library.i
 	@echo ... library.s
-	@echo ... libraryPMC.obj
-	@echo ... libraryPMC.i
-	@echo ... libraryPMC.s
 .PHONY : help
 
 

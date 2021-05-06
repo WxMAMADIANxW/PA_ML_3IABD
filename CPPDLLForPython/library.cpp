@@ -1,10 +1,11 @@
 #include "library.h"
 #include <stdio.h>
 #include <iostream>
+#include <Eigen>
 
 
 #ifdef __WIN32__
-#define DLLEXPORT _declspec(dllexport)
+#define DLLEXPORT __declspec(dllexport)
 #else
 #define DLLEXPORT
 #endif
@@ -14,6 +15,6 @@
  * Prend en parametre ->
  * Retourne ->
  * */
-DLLEXPORT <nom_fonction>(/*parametre*/) {
-    /*Corp fonction*/
+DLLEXPORT int toto() {
+    return 1;
 }

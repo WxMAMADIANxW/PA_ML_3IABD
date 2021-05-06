@@ -4,7 +4,7 @@
 # compile CXX with C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/g++.exe
 CXX_DEFINES = -DCPPDLLForPython_EXPORTS
 
-CXX_INCLUDES = 
+CXX_INCLUDES = @CMakeFiles/CPPDLLForPython.dir/includes_CXX.rsp
 
 CXX_FLAGS = -g -std=gnu++17
 

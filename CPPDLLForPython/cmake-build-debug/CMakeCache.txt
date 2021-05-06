@@ -250,6 +250,9 @@ CPPDLLForPython_BINARY_DIR:STATIC=C:/Users/Mamadian/Documents/ESGI/MachineLearni
 //Value Computed by CMake
 CPPDLLForPython_SOURCE_DIR:STATIC=C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython
 
+//The directory containing a CMake configuration file for Eigen3.
+Eigen3_DIR:PATH=Eigen3_DIR-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries
