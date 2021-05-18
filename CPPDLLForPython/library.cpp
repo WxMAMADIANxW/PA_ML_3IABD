@@ -17,10 +17,6 @@
  * Prend en parametre ->
  * Retourne ->
  * */
-DLLEXPORT int toto() {
-    return 1;
-}
-
 
 DLLEXPORT float random(float start, float end){
     std::random_device rand_dev;
@@ -28,9 +24,22 @@ DLLEXPORT float random(float start, float end){
     std::uniform_int_distribution<int>  distrubution(start, end);
     return distrubution(generator);
 }
-DLLEXPORT std::vector<float>  create_linear_model(int input_dim) {
+
+DLLEXPORT Eigen::MatrixXf create_linear_model(int input_dim){
+    Eigen::MatrixXf model;
     std::vector<float> array;
-    std::uniform_int_distribution<int> distribution(-1.0,1.0);
+    for(int i = 0; i <=  input_dim + 1; i+=1){
+        array.push_back(random(-1.0,1.0));
+    }
+
+    return model;
+
+}
+
+
+
+DLLEXPORT std::vector<float>  create_linear_model2(int input_dim) {
+    std::vector<float> array;
     for(int i = 0; i <=  input_dim + 1; i+=1){
         array.push_back(random(-1.0,1.0));
     }
@@ -82,17 +91,17 @@ DLLEXPORT std::vector<float> train_classification_rosenblatt_rule_linear_model(s
     return model;
 }
 
-DLLEXPORT std::vector<float> train_regression_pseudo_inverse_linear_model(std::vector<float> model,std::vector<float> flattened_dataset_inputs, std::vector<float> flattened_dataset_expected_outputs){
+/*DLLEXPORT std::vector<float> train_regression_pseudo_inverse_linear_model(std::vector<float> model,std::vector<float> flattened_dataset_inputs, std::vector<float> flattened_dataset_expected_outputs){
     int input_dim = model.size() - 1;
     int samples_count = flattened_dataset_inputs.size();
     Eigen::MatrixXd  X,Y;
-    
 
-}
-
+}*/
 
 
-------------------------------
+
+/*------------------------------
+
 def train_regression_pseudo_inverse_linear_model(model: [float],flattened_dataset_inputs:[float],flattened_dataset_expected_outputs: [float]):
 input_dim = len(model) - 1
 samples_count = len(flattened_dataset_inputs) // input_dim
@@ -111,5 +120,5 @@ for i in range(len(model)):
 model[i] = W[i][0]
 
 def destroy_linear_model(model: [float]):
-del model
+del model*/
 

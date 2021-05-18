@@ -1,9 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/CPPDLLForPython.dir/library.cpp.obj"
-  "libCPPDLLForPython.dll"
-  "libCPPDLLForPython.dll.a"
-  "libCPPDLLForPython.dll.manifest"
+  "CMakeFiles/CPPDLLForPython.dir/library.cpp.o"
+  "CMakeFiles/CPPDLLForPython.dir/test.cpp.o"
   "libCPPDLLForPython.pdb"
+  "libCPPDLLForPython.so"
 )
 
 # Per-language clean rules from dependency scanning.
