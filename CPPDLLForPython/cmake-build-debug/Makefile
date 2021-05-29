@@ -129,6 +129,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Testing
+
+# Build rule for target.
+Testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Testing
+.PHONY : Testing
+
+# fast build rule for target.
+Testing/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/build
+.PHONY : Testing/fast
+
+#=============================================================================
 # Target rules for targets named CPPDLLForPython
 
 # Build rule for target.
@@ -168,32 +181,32 @@ library.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/library.cpp.s
 .PHONY : library.cpp.s
 
-test.obj: test.cpp.obj
+main.obj: main.cpp.obj
 
-.PHONY : test.obj
+.PHONY : main.obj
 
 # target to build an object file
-test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/test.cpp.obj
-.PHONY : test.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-test.i: test.cpp.i
+main.i: main.cpp.i
 
-.PHONY : test.i
+.PHONY : main.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/test.cpp.i
-.PHONY : test.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-test.s: test.cpp.s
+main.s: main.cpp.s
 
-.PHONY : test.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/test.cpp.s
-.PHONY : test.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -204,12 +217,13 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CPPDLLForPython
+	@echo ... Testing
 	@echo ... library.obj
 	@echo ... library.i
 	@echo ... library.s
-	@echo ... test.obj
-	@echo ... test.i
-	@echo ... test.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

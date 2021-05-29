@@ -1,0 +1,3 @@
+C:\Users\Mamadian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7142.21\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\Testing.dir/objects.a
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\Testing.dir/objects.a @CMakeFiles\Testing.dir\objects1.rsp
+C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Testing.dir/objects.a -Wl,--no-whole-archive -o Testing.exe -Wl,--out-implib,libTesting.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Testing.dir\linklibs.rsp

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h
+iostream
+-
+vector
+-
+
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/main.cpp
+library.h
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h
+
