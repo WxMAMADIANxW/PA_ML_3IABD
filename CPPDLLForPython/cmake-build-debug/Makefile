@@ -129,19 +129,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Testing
-
-# Build rule for target.
-Testing: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Testing
-.PHONY : Testing
-
-# fast build rule for target.
-Testing/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/build
-.PHONY : Testing/fast
-
-#=============================================================================
 # Target rules for targets named CPPDLLForPython
 
 # Build rule for target.
@@ -181,33 +168,6 @@ library.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make CMakeFiles/CPPDLLForPython.dir/library.cpp.s
 .PHONY : library.cpp.s
 
-main.obj: main.cpp.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.obj
-.PHONY : main.cpp.obj
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Testing.dir\build.make CMakeFiles/Testing.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -217,13 +177,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... CPPDLLForPython
-	@echo ... Testing
 	@echo ... library.obj
 	@echo ... library.i
 	@echo ... library.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 .PHONY : help
 
 
