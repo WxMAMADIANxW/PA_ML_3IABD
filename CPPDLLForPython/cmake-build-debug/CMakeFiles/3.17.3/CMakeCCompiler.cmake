@@ -17,7 +17,6 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-
 set(CMAKE_AR "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/ar.exe")
 set(CMAKE_C_COMPILER_AR "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/gcc-ar.exe")
 set(CMAKE_RANLIB "C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/ranlib.exe")

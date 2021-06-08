@@ -1,3 +1,0 @@
-C:\Users\Mamadian\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7142.21\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\library.dir/objects.a
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\ar.exe cr CMakeFiles\library.dir/objects.a @CMakeFiles\library.dir\objects1.rsp
-C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\library.dir/objects.a -Wl,--no-whole-archive -o library.exe -Wl,--out-implib,liblibrary.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\library.dir\linklibs.rsp
