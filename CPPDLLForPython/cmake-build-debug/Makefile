@@ -153,6 +153,33 @@ library.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CPPDLLForPython.dir\library.cpp.s
 .PHONY : library.cpp.s
 
+library_classification.obj: library_classification.cpp.obj
+
+.PHONY : library_classification.obj
+
+# target to build an object file
+library_classification.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CPPDLLForPython.dir\library_classification.cpp.obj
+.PHONY : library_classification.cpp.obj
+
+library_classification.i: library_classification.cpp.i
+
+.PHONY : library_classification.i
+
+# target to preprocess a source file
+library_classification.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CPPDLLForPython.dir\library_classification.cpp.i
+.PHONY : library_classification.cpp.i
+
+library_classification.s: library_classification.cpp.s
+
+.PHONY : library_classification.s
+
+# target to generate assembly for a file
+library_classification.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\CPPDLLForPython.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\CPPDLLForPython.dir\library_classification.cpp.s
+.PHONY : library_classification.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -165,6 +192,9 @@ help:
 	@echo ... library.obj
 	@echo ... library.i
 	@echo ... library.s
+	@echo ... library_classification.obj
+	@echo ... library_classification.i
+	@echo ... library_classification.s
 .PHONY : help
 
 

@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CPPDLLForPython.dir/library.cpp.obj"
+  "CMakeFiles/CPPDLLForPython.dir/library_classification.cpp.obj"
   "CPPDLLForPython.dll"
   "CPPDLLForPython.dll.manifest"
   "CPPDLLForPython.lib"

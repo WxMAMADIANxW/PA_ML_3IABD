@@ -88,6 +88,9 @@
 		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h">
 			<Option target="CPPDLLForPython"/>
 		</Unit>
+		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library_classification.cpp">
+			<Option target="CPPDLLForPython"/>
+		</Unit>
 		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

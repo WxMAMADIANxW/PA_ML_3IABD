@@ -1,3 +1,4 @@
+/*Fichier créer par Mamadou-dian DJALO*/
 #include "library.h"
 #include <stdio.h>
 #include <Eigen>
@@ -11,6 +12,9 @@
 #define DLLEXPORT
 #endif
 
+DLLEXPORT int toto(){
+    return 42;
+}
 
 DLLEXPORT float random(float start, float end) {
     std::default_random_engine generator;
