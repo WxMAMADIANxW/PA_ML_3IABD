@@ -4,94 +4,93 @@
 	<Project>
 		<Option title="CPPDLLForPython"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
+		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
+				<Option working_dir="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="CPPDLLForPython">
-				<Option output="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/CPPDLLForPython.dll" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/Eigen"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30037\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 CPPDLLForPython"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="CPPDLLForPython/fast">
-				<Option output="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/CPPDLLForPython.dll" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="3"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/Eigen"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.29.30037\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 CPPDLLForPython/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
+				<Option working_dir="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
+				<Option working_dir="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Mamadian\Documents\ESGI\MachineLearning\PA_ML_3IABD\CPPDLLForPython\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CPPDLLForPython">
+				<Option output="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/libCPPDLLForPython.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/Eigen"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPPDLLForPython"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CPPDLLForPython/fast">
+				<Option output="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/libCPPDLLForPython.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/Eigen"/>
+					<Add directory="/usr/include/c++/10"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/10"/>
+					<Add directory="/usr/include/c++/10/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/10/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 CPPDLLForPython/fast"/>
+					<CompileFile command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j4 -f &quot;/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.cpp">
+		<Unit filename="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/library.cpp">
 			<Option target="CPPDLLForPython"/>
 		</Unit>
-		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h">
+		<Unit filename="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/library.h">
 			<Option target="CPPDLLForPython"/>
 		</Unit>
-		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library_classification.cpp">
-			<Option target="CPPDLLForPython"/>
-		</Unit>
-		<Unit filename="C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/CMakeLists.txt">
+		<Unit filename="/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

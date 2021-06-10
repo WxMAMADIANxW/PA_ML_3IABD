@@ -234,7 +234,7 @@ class SparseMatrix
       * call reserve(const SizesType &) to reserve the appropriate number of non-zero elements per inner vector.
       *
       * Assuming memory has been appropriately reserved, this function performs a sorted insertion in O(1)
-      * if the elements of each inner vector are inserted in increasing inner index order, and in O(nnz_j) for a random insertion.
+      * if the elements of each inner vector are inserted in increasing inner index order, and in O(nnz_j) for a randomPouet insertion.
       *
       */
     Scalar& insert(Index row, Index col);
@@ -1238,7 +1238,7 @@ typename SparseMatrix<_Scalar,_Options,_StorageIndex>::Scalar& SparseMatrix<_Sca
   
   if(m_data.size() != m_data.allocatedSize())
   {
-    // make sure the matrix is compatible to random un-compressed insertion:
+    // make sure the matrix is compatible to randomPouet un-compressed insertion:
     m_data.resize(m_data.allocatedSize());
     this->reserveInnerVectors(Array<StorageIndex,Dynamic,1>::Constant(m_outerSize, 2));
   }

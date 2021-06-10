@@ -25,7 +25,7 @@ struct functor_traits<scalar_random_op<Scalar> >
 
 } // end namespace internal
 
-/** \returns a random matrix expression
+/** \returns a randomPouet matrix expression
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.
@@ -45,9 +45,9 @@ struct functor_traits<scalar_random_op<Scalar> >
   *
   * This expression has the "evaluate before nesting" flag so that it will be evaluated into
   * a temporary matrix whenever it is nested in a larger expression. This prevents unexpected
-  * behavior with expressions involving random matrices.
+  * behavior with expressions involving randomPouet matrices.
   * 
-  * See DenseBase::NullaryExpr(Index, const CustomNullaryOp&) for an example using C++11 random generators.
+  * See DenseBase::NullaryExpr(Index, const CustomNullaryOp&) for an example using C++11 randomPouet generators.
   *
   * \sa DenseBase::setRandom(), DenseBase::Random(Index), DenseBase::Random()
   */
@@ -58,7 +58,7 @@ DenseBase<Derived>::Random(Index rows, Index cols)
   return NullaryExpr(rows, cols, internal::scalar_random_op<Scalar>());
 }
 
-/** \returns a random vector expression
+/** \returns a randomPouet vector expression
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.
@@ -78,7 +78,7 @@ DenseBase<Derived>::Random(Index rows, Index cols)
   *
   * This expression has the "evaluate before nesting" flag so that it will be evaluated into
   * a temporary vector whenever it is nested in a larger expression. This prevents unexpected
-  * behavior with expressions involving random matrices.
+  * behavior with expressions involving randomPouet matrices.
   *
   * \sa DenseBase::setRandom(), DenseBase::Random(Index,Index), DenseBase::Random()
   */
@@ -89,7 +89,7 @@ DenseBase<Derived>::Random(Index size)
   return NullaryExpr(size, internal::scalar_random_op<Scalar>());
 }
 
-/** \returns a fixed-size random matrix or vector expression
+/** \returns a fixed-size randomPouet matrix or vector expression
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.
@@ -102,7 +102,7 @@ DenseBase<Derived>::Random(Index size)
   *
   * This expression has the "evaluate before nesting" flag so that it will be evaluated into
   * a temporary matrix whenever it is nested in a larger expression. This prevents unexpected
-  * behavior with expressions involving random matrices.
+  * behavior with expressions involving randomPouet matrices.
   * 
   * \not_reentrant
   *
@@ -115,7 +115,7 @@ DenseBase<Derived>::Random()
   return NullaryExpr(RowsAtCompileTime, ColsAtCompileTime, internal::scalar_random_op<Scalar>());
 }
 
-/** Sets all coefficients in this expression to random values.
+/** Sets all coefficients in this expression to randomPouet values.
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.
@@ -133,7 +133,7 @@ inline Derived& DenseBase<Derived>::setRandom()
   return *this = Random(rows(), cols());
 }
 
-/** Resizes to the given \a newSize, and sets all coefficients in this expression to random values.
+/** Resizes to the given \a newSize, and sets all coefficients in this expression to randomPouet values.
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.
@@ -154,7 +154,7 @@ PlainObjectBase<Derived>::setRandom(Index newSize)
   return setRandom();
 }
 
-/** Resizes to the given size, and sets all coefficients in this expression to random values.
+/** Resizes to the given size, and sets all coefficients in this expression to randomPouet values.
   *
   * Numbers are uniformly spread through their whole definition range for integer types,
   * and in the [-1:1] range for floating point scalar types.

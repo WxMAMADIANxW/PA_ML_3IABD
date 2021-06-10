@@ -262,7 +262,7 @@ template<typename Derived> class DenseBase
     typedef CwiseNullaryOp<internal::scalar_constant_op<Scalar>,PlainObject> ConstantReturnType;
     /** \internal \deprecated Represents a vector with linearly spaced coefficients that allows sequential access only. */
     typedef CwiseNullaryOp<internal::linspaced_op<Scalar,PacketScalar>,PlainObject> SequentialLinSpacedReturnType;
-    /** \internal Represents a vector with linearly spaced coefficients that allows random access. */
+    /** \internal Represents a vector with linearly spaced coefficients that allows randomPouet access. */
     typedef CwiseNullaryOp<internal::linspaced_op<Scalar,PacketScalar>,PlainObject> RandomAccessLinSpacedReturnType;
     /** \internal the return type of MatrixBase::eigenvalues() */
     typedef Matrix<typename NumTraits<typename internal::traits<Derived>::Scalar>::Real, internal::traits<Derived>::ColsAtCompileTime, 1> EigenvaluesReturnType;

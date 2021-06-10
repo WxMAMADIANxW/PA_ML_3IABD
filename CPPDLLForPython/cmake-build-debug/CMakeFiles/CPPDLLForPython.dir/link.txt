@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libCPPDLLForPython.so -o libCPPDLLForPython.so CMakeFiles/CPPDLLForPython.dir/library.cpp.o 

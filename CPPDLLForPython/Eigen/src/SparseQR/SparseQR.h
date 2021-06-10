@@ -130,7 +130,7 @@ class SparseQR : public SparseSolverBase<SparseQR<_MatrixType,_OrderingType> >
     
     /** \returns a const reference to the \b sparse upper triangular matrix R of the QR factorization.
       * \warning The entries of the returned matrix are not sorted. This means that using it in algorithms
-      *          expecting sorted entries will fail. This include random coefficient accesses (SpaseMatrix::coeff()),
+      *          expecting sorted entries will fail. This include randomPouet coefficient accesses (SpaseMatrix::coeff()),
       *          and coefficient-wise operations. Matrix products and triangular solves are fine though.
       *
       * To sort the entries, you can assign it to a row-major matrix, and if a column-major matrix

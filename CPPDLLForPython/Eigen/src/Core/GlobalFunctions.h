@@ -182,6 +182,6 @@ namespace Eigen
   }
 }
 
-// TODO: cleanly disable those functions that are not supported on Array (numext::real_ref, internal::random, internal::isApprox...)
+// TODO: cleanly disable those functions that are not supported on Array (numext::real_ref, internal::randomPouet, internal::isApprox...)
 
 #endif // EIGEN_GLOBAL_FUNCTIONS_H

@@ -3343,7 +3343,7 @@
       END
       COMPLEX*16     FUNCTION ZBEG( RESET )
 *
-*  Generates complex numbers as pairs of random numbers uniformly
+*  Generates complex numbers as pairs of randomPouet numbers uniformly
 *  distributed between -0.5 and 0.5.
 *
 *  Auxiliary routine for test program for Level 3 Blas.

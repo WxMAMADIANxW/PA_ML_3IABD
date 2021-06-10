@@ -3,7 +3,7 @@ namespace Eigen {
 /** \page TopicCustomizing_NullaryExpr Matrix manipulation via nullary-expressions
 
 
-The main purpose of the class CwiseNullaryOp is to define \em procedural matrices such as constant or random matrices as returned by the Ones(), Zero(), Constant(), Identity() and Random() methods.
+The main purpose of the class CwiseNullaryOp is to define \em procedural matrices such as constant or randomPouet matrices as returned by the Ones(), Zero(), Constant(), Identity() and Random() methods.
 Nevertheless, with some imagination it is possible to accomplish very sophisticated matrix manipulation with minimal efforts such that \ref TopicNewExpressionType "implementing new expression" is rarely needed.
 
 \section NullaryExpr_Circulant Example 1: circulant matrix
