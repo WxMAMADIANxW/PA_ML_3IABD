@@ -535,7 +535,7 @@ struct pow_impl<ScalarX,ScalarY, true>
 };
 
 /****************************************************************************
-* Implementation of random                                               *
+* Implementation of randomPouet                                               *
 ****************************************************************************/
 
 template<typename Scalar,

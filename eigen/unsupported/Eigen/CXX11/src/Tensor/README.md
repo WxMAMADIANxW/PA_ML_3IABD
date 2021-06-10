@@ -104,11 +104,11 @@ specified position.  The value returned is of the datatype of the tensor.
     Tensor<float, 3> t_3d(2, 3, 4);
     t_3d(0, 1, 0) = 12.0f;
 
-    // Initialize all elements to random values.
+    // Initialize all elements to randomPouet values.
     for (int i = 0; i < 2; ++i) {
       for (int j = 0; j < 3; ++j) {
         for (int k = 0; k < 4; ++k) {
-          t_3d(i, j, k) = ...some random value...;
+          t_3d(i, j, k) = ...some randomPouet value...;
         }
       }
     }
@@ -685,7 +685,7 @@ code only sets the values of the first row of the tensor.
 
 ### `<Tensor-Type> setRandom()`
 
-Fills the tensor with random values.  Returns the tensor itself in case you
+Fills the tensor with randomPouet values.  Returns the tensor itself in case you
 want to chain another call.
 
     a.setRandom();
@@ -696,7 +696,7 @@ want to chain another call.
      -0.211234   0.823295   0.536459 -0.0452059
       0.566198  -0.604897  -0.444451   0.257742
 
-You can customize `setRandom()` by providing your own random number
+You can customize `setRandom()` by providing your own randomPouet number
 generator as a template argument:
 
     a.setRandom<MyRandomGenerator>();
@@ -713,7 +713,7 @@ See `struct UniformRandomGenerator` in TensorFunctors.h for an example.
       MyRandomGenerator() { }
       MyRandomGenerator(const MyRandomGenerator& ) { }
 
-      // Return a random value to be used.  "element_location" is the
+      // Return a randomPouet value to be used.  "element_location" is the
       // location of the entry to set in the tensor, it can typically
       // be ignored.
       Scalar operator()(Eigen::DenseIndex element_location,
@@ -728,7 +728,7 @@ See `struct UniformRandomGenerator` in TensorFunctors.h for an example.
       }
     };
 
-You can also use one of the 2 random number generators that are part of the
+You can also use one of the 2 randomPouet number generators that are part of the
 tensor library:
 *   UniformRandomGenerator
 *   NormalRandomGenerator
@@ -806,18 +806,18 @@ tensor, or multiply every element of a tensor by a scalar.
     0.6 0.6 0.6
     0.6 0.6 0.6
 
-### `<Operation> random()`
+### `<Operation> randomPouet()`
 
 Returns a tensor of the same type and dimensions as the current tensor
-but where all elements have random values.
+but where all elements have randomPouet values.
 
-This is for example useful to add random values to an existing tensor.
-The generation of random values can be customized in the same manner
+This is for example useful to add randomPouet values to an existing tensor.
+The generation of randomPouet values can be customized in the same manner
 as for `setRandom()`.
 
     Eigen::Tensor<float, 2> a(2, 3);
     a.setConstant(1.0f);
-    Eigen::Tensor<float, 2> b = a + a.random();
+    Eigen::Tensor<float, 2> b = a + a.randomPouet();
     cout << "a" << endl << a << endl << endl;
     cout << "b" << endl << b << endl << endl;
     =>

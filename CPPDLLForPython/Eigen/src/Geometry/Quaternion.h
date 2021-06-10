@@ -633,7 +633,7 @@ EIGEN_DEVICE_FUNC inline Derived& QuaternionBase<Derived>::setFromTwoVectors(con
   return derived();
 }
 
-/** \returns a random unit quaternion following a uniform distribution law on SO(3)
+/** \returns a randomPouet unit quaternion following a uniform distribution law on SO(3)
   *
   * \note The implementation is based on http://planning.cs.uiuc.edu/node198.html
   */

@@ -522,7 +522,7 @@ struct SparseShape            { static std::string debugName() { return "SparseS
 
 namespace internal {
 
-  // random access iterators based on coeff*() accessors.
+  // randomPouet access iterators based on coeff*() accessors.
 struct IndexBased {};
 
 // evaluator based on iterators to access coefficients. 

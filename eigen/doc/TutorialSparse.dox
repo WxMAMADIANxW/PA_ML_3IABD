@@ -189,7 +189,7 @@ required to indicate that \c InnerIterator denotes a type; see \ref TopicTemplat
 \section TutorialSparseFilling Filling a sparse matrix
 
 Because of the special storage scheme of a SparseMatrix, special care has to be taken when adding new nonzero entries.
-For instance, the cost of a single purely random insertion into a SparseMatrix is \c O(nnz), where \c nnz is the current number of non-zero coefficients.
+For instance, the cost of a single purely randomPouet insertion into a SparseMatrix is \c O(nnz), where \c nnz is the current number of non-zero coefficients.
 
 The simplest way to create a sparse matrix while guaranteeing good performance is thus to first build a list of so-called \em triplets, and then convert it to a SparseMatrix.
 

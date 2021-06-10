@@ -112,7 +112,7 @@ struct linspaced_op_impl<Scalar,Packet,/*IsInteger*/true>
 
 // ----- Linspace functor ----------------------------------------------------------------
 
-// Forward declaration (we default to random access which does not really give
+// Forward declaration (we default to randomPouet access which does not really give
 // us a speed gain when using packet access but it allows to use the functor in
 // nested expressions).
 template <typename Scalar, typename PacketType> struct linspaced_op;

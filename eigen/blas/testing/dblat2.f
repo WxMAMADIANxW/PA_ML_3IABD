@@ -3032,7 +3032,7 @@
       END
       DOUBLE PRECISION FUNCTION DBEG( RESET )
 *
-*  Generates random numbers uniformly distributed between -0.5 and 0.5.
+*  Generates randomPouet numbers uniformly distributed between -0.5 and 0.5.
 *
 *  Auxiliary routine for test program for Level 2 Blas.
 *
