@@ -1416,9 +1416,9 @@ lapacke_mangling.h
 
 ../Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/library.cpp
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.cpp
 library.h
-/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/library.h
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h
 cstdio
 -
 Eigen
@@ -1428,5 +1428,5 @@ vector
 random
 -
 
-/home/mamadian/Documents/ESGI/machine_learning/projets/PA_ML_3IABD/CPPDLLForPython/library.h
+C:/Users/Mamadian/Documents/ESGI/MachineLearning/PA_ML_3IABD/CPPDLLForPython/library.h
 

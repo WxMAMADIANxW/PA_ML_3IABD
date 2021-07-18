@@ -10,14 +10,11 @@
 #else
 #define DLLEXPORT extern "C"
 #endif
-using namespace std;
 
-DLLEXPORT int toto(){
-    return 42;
-}
 
 DLLEXPORT float randomPouet(float start, float end) {
-    std::default_random_engine generator;
+    std::random_device rd;
+    std::default_random_engine generator(rd());
     std::uniform_real_distribution<float> distribution(start, end);
     return distribution(generator);
 }
@@ -86,7 +83,7 @@ DLLEXPORT float* train_regression_pseudo_inverse_linear_model(float *model, int 
 
 /*partie MLP*/
 
-int l, i, j, it, k;
+/*int l, i, j, it, k;
 float sum_result;
 
 class mlp {
@@ -248,7 +245,7 @@ DLLEXPORT float predict_mlp_model_regression(mlp *MLP, vector<float>sample_input
 
 DLLEXPORT void destroyMLP(){
     ;
-}
+}*/
 
 
 
