@@ -5,8 +5,8 @@
 #include <random>
 using namespace std;
 
-#ifdef __WIN32__
-#define DLLEXPORT __declspec(dllexport)
+#if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
+#define DLLEXPORT extern "C" __declspec(dllexport)
 #else
 #define DLLEXPORT
 #endif
@@ -14,19 +14,28 @@ using namespace std;
 int l, i, j, it, k;
 float sum_result;
 
+float random(float start, float end) {
+    default_random_engine generator;
+    uniform_real_distribution<float> distribution(start, end);
+    return distribution(generator);
+}
+
 class mlp{
 
 public:
-    vector<int> d;
+    int *d;
+    int dsize;
     vector<vector<vector<float>>> W;
     vector<vector<float>> X;
     vector<vector<float>> deltas;
 public:
-    mlp(vector<int> a,
-    vector<vector<vector<float>>> b,
-    vector<vector<float>> c,
-    vector<vector<float>> e){
+    mlp(int *a,
+        int f,
+        vector<vector<vector<float>>> b,
+        vector<vector<float>> c,
+        vector<vector<float>> e){
         d = a;
+        dsize = f;
         W = b;
         X = c;
         deltas = e;
@@ -53,12 +62,6 @@ public:
                 }
             }
         }
-    }
-
-    float random(float start, float end) {
-        default_random_engine generator;
-        uniform_real_distribution<float> distribution(start, end);
-        return distribution(generator);
     }
 
     void train_stochastic_gradient_backpropagation(vector<float>flattened_dataset_inputs,
@@ -111,20 +114,16 @@ public:
     }
 };
 
-float random(float start, float end) {
-    default_random_engine generator;
-    uniform_real_distribution<float> distribution(start, end);
-    return distribution(generator);
-}
 
-DLLEXPORT mlp create_MLP_model (vector<int> npl){
 
-    vector<int> d = npl;
+DLLEXPORT mlp* create_MLP_model (int npl[], int dsize){
+
+    int *d = npl;
     vector<vector<vector<float>>> W;
     vector<vector<float>> X;
     vector<vector<float>> deltas;
 
-    for( l = 0; l <= d.size(); l++){
+    for( l = 0; l <= dsize; l++){
         W.resize(W.size()+1);
         if(l == 0){
             continue;
@@ -138,7 +137,7 @@ DLLEXPORT mlp create_MLP_model (vector<int> npl){
     }
 
     X;
-    for(l = 0; l <=d.size(); l++){
+    for(l = 0; l <=dsize; l++){
         X.resize(X.size()+1);
         for ( j = 0; j < d[l]+1 ; ++j) {
             X[l].push_back((j == 0) ? 1.0 : 0.0);
@@ -146,45 +145,41 @@ DLLEXPORT mlp create_MLP_model (vector<int> npl){
     }
 
     deltas;
-    for (l = 0; l <= d.size(); l++){
+    for (l = 0; l <= dsize; l++){
         for ( j = 0; j < d[l]+1 ; ++j) {
             deltas[l].push_back(0.0);
         }
     }
 
-    mlp MLP = *new mlp(d, W, X, deltas);
+    mlp* MLP = new mlp(d, dsize, W, X, deltas);
     return MLP;
 
 }
 
-DLLEXPORT void train_classification_stochastic_backprop_mlp_model (mlp MLP, vector<float>flattened_dataset_inputs,
+DLLEXPORT void train_classification_stochastic_backprop_mlp_model (mlp* MLP, vector<float>flattened_dataset_inputs,
                                                                   vector<float>flattened_expected_outputs,
                                                                   float alpha = 0.01,
                                                                   int iterations_count = 1000){
-    MLP.train_stochastic_gradient_backpropagation(flattened_dataset_inputs, flattened_expected_outputs, true, alpha, iterations_count);
+    MLP->train_stochastic_gradient_backpropagation(flattened_dataset_inputs, flattened_expected_outputs, true, alpha, iterations_count);
 }
 
-DLLEXPORT void train_regression_stochastic_backprop_mlp_model (mlp MLP, vector<float>flattened_dataset_inputs,
+DLLEXPORT void train_regression_stochastic_backprop_mlp_model (mlp* MLP, vector<float>flattened_dataset_inputs,
                                                                vector<float>flattened_expected_outputs,
                                                                float alpha = 0.01,
                                                                int iterations_count = 1000){
-    MLP.train_stochastic_gradient_backpropagation(flattened_dataset_inputs, flattened_expected_outputs, false, alpha, iterations_count);
+    MLP->train_stochastic_gradient_backpropagation(flattened_dataset_inputs, flattened_expected_outputs, false, alpha, iterations_count);
 }
 
-/*DLLEXPORT float predict_mlp_model_classification(mlp MLP, vector<float>sample_inputs){
-    MLP.forward_pass(sample_inputs, true);
-    return MLP.X[MLP.d.size()-1][1];
+DLLEXPORT float predict_mlp_model_classification(mlp* MLP, vector<float>sample_inputs){
+    MLP->forward_pass(sample_inputs, true);
+    return MLP->X[MLP->dsize-1][1];
 }
 
-DLLEXPORT float predict_mlp_model_regression(mlp MLP, vector<float>sample_inputs){
-    MLP.forward_pass(sample_inputs, false);
-    return MLP.X[MLP.d.size()-1][MLP.X.begin()+1,MLP.X.end()];
+DLLEXPORT float predict_mlp_model_regression(mlp* MLP, vector<float>sample_inputs){
+    MLP->forward_pass(sample_inputs, false);
+    return MLP->X[MLP->dsize-1][1];
 }
-*/
-int main() {
 
-
-}
 
 /*Présentation de la fonction
  * description
