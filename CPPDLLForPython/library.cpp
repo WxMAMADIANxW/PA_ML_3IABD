@@ -14,7 +14,7 @@ using namespace std;
 int l, i, j, it, k;
 float sum_result;
 
-float random(float start, float end) {
+float randomPouet(float start, float end) {
     default_random_engine generator;
     uniform_real_distribution<float> distribution(start, end);
     return distribution(generator);
@@ -80,7 +80,7 @@ public:
         int samples_count = flattened_dataset_inputs.size() / input_dim;
 
         for(it = 0; it < iterations_count;it ++){
-            k = (int) (random(0, samples_count - 1));
+            k = (int) (randomPouet(0, samples_count - 1));
             vector<float> sample_inputs = reinterpret_cast<vector<float, allocator<float>> &&>(flattened_dataset_inputs[k *input_dim,
                     (k + 1) * input_dim]);
             vector<float> sample_expected_outputs = reinterpret_cast<vector<float, allocator<float>> &&>(flattened_expected_outputs[
@@ -131,7 +131,7 @@ DLLEXPORT mlp* create_MLP_model (int npl[], int dsize){
         for ( i = 0; i < d[l-1]+1 ; ++i) {
             W[l].resize(W.size()+1);
             for ( j = 0; j < d[l]+1 ; ++j) {
-                W[l][i].push_back(random(-1.0,1.0));
+                W[l][i].push_back(randomPouet(-1.0,1.0));
             }
         }
     }
