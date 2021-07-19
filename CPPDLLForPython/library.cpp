@@ -1,6 +1,7 @@
 #include "library.h"
 #include <cstdio>
 #include <Eigen>
+#include <utility>
 #include <vector>
 #include <random>
 using namespace std;
@@ -46,9 +47,9 @@ DLLEXPORT float predict_linear_model_classification(float *model, int model_size
 }
 
 DLLEXPORT float *train_classification_rosenblatt_rule_linear_model(float* model, int model_size, float* flattened_dataset_inputs,
-                                                         int dateset_input_size,
-                                                         float* flattened_dataset_expected_outputs, float alpha = 0.001,
-                                                         int iterations_count = 50) {
+                                                                   int dateset_input_size,
+                                                                   float* flattened_dataset_expected_outputs, float alpha = 0.001,
+                                                                   int iterations_count = 50) {
     int input_dim = model_size - 1;
     std::vector<float> Xk;
     for (int i = 0; i < iterations_count; i += 1) {
@@ -65,8 +66,8 @@ DLLEXPORT float *train_classification_rosenblatt_rule_linear_model(float* model,
 }
 
 DLLEXPORT float* train_regression_pseudo_inverse_linear_model(float *model, int model_size, float *flattened_dataset_inputs,
-                                                    int dateset_input_size, float *flattened_dataset_expected_outputs,
-                                                    int dataset_output_size) {
+                                                              int dateset_input_size, float *flattened_dataset_expected_outputs,
+                                                              int dataset_output_size) {
     int input_dim = model_size - 1;
     int samples_count = dateset_input_size / input_dim;
 
@@ -101,13 +102,13 @@ public:
     mlp(int *a,
         int f,
         vector<vector<vector<float>>> b,
-    vector<vector<float>> c,
-            vector<vector<float>> e){
+        vector<vector<float>> c,
+        vector<vector<float>> e){
         d = a;
         dsize = f;
-        W = b;
-        X = c;
-        deltas = e;
+        W = std::move(b);
+        X = std::move(c);
+        deltas = std::move(e);
     }
     void forward_pass(vector<float>sample_inputs, bool is_classification){
 
@@ -192,30 +193,34 @@ DLLEXPORT mlp* create_MLP_model (int npl[], int dsize){
     vector<vector<float>> X;
     vector<vector<float>> deltas;
 
-    for( l = 0; l <= dsize; l++){
-        W.resize(W.size()+1);
+    for(auto l = 0; l < dsize; l++){
+        //W.resize(W.size()+1);
+        W.push_back(vector<vector<float>>());
         if(l == 0){
             continue;
         }
-        for ( i = 0; i < d[l-1]+1 ; ++i) {
-            W[l].resize(W.size()+1);
-            for ( j = 0; j < d[l]+1 ; ++j) {
+        for (auto i = 0; i < d[l-1]+1 ; ++i) {
+            W[l].push_back(vector<float>());
+            // W[l].resize(W.size()+1);
+            for (auto j = 0; j < d[l]+1 ; ++j) {
                 W[l][i].push_back(randomPouet(-1.0,1.0));
             }
         }
     }
 
-    X;
-    for(l = 0; l <=dsize; l++){
-        X.resize(X.size()+1);
-        for ( j = 0; j < d[l]+1 ; ++j) {
+
+    for(auto l = 0; l <dsize; l++){
+        //X.resize(X.size()+1);
+        X.push_back(vector<float>());
+        for (auto j = 0; j < d[l]+1 ; ++j) {
             X[l].push_back((j == 0) ? 1.0 : 0.0);
         }
     }
 
-    deltas;
-    for (l = 0; l <= dsize; l++){
-        for ( j = 0; j < d[l]+1 ; ++j) {
+
+    for (auto l = 0; l <= dsize; l++){
+        deltas.push_back(vector<float>());
+        for (auto j = 0; j < d[l]+1 ; ++j) {
             deltas[l].push_back(0.0);
         }
     }
@@ -248,5 +253,3 @@ DLLEXPORT float predict_mlp_model_regression(mlp* MLP, vector<float>sample_input
     MLP->forward_pass(sample_inputs, false);
     return MLP->X[MLP->dsize-1][1];
 }
-
-
